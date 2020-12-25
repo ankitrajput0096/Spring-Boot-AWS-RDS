@@ -1,0 +1,14 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: ./spring_boot_app
+    ports:
+      - "8090:8090"
+    # Please add AWS RDS db credentials here
+    # Have added sample values
+    environment:
+      POSTGRES_USER: ankit
+      POSTGRES_PASSWORD: ankitrajput
+      POSTGRES_URL: my-db-springboot.cphjaxjsdjed.ap-south-1.rds.amazonaws.com
+      POSTGRES_PORT: 5432
