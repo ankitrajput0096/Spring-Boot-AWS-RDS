@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "991cac81-41ea-4dc1-bf48-4b629b2a7990",
+		"name": "SpringBoot_PostgreSQL_AWS_RDS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8090/springBootJpa/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/topics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/topics",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/topics/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"topic_id\":\"java\",\n\t\"topic_name\":\"java programming\",\n\t\"topic_desc\":\"java is easy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/springBootJpa/topics/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"topics",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/topics/java",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/topics/java",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"topics",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/topics/update/java",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"topic_id\":\"java\",\n\t\"topic_name\":\"java programming\",\n\t\"topic_desc\":\"java is not easy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/springBootJpa/topics/update/java",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"topics",
+						"update",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/topics/getById?id=java",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/topics/getById?id=java",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"topics",
+						"getById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "java"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/topics/getById?id=java&name=java programming",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/topics/getById?id=java&name=java programming",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"topics",
+						"getById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "java"
+						},
+						{
+							"key": "name",
+							"value": "java programming"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/topics/delete/java",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/topics/delete/java",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"topics",
+						"delete",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/transaction/scenario_one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/transaction/scenario_one",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"transaction",
+						"scenario_one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/transaction/scenario_two",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/transaction/scenario_two",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"transaction",
+						"scenario_two"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/transaction/scenario_three",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/transaction/scenario_three",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"transaction",
+						"scenario_three"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/transaction/scenario_four",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/transaction/scenario_four",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"transaction",
+						"scenario_four"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/books/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"book_id\":\"java book\",\n\t\"book_name\":\"java programming book\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/springBootJpa/books/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"books",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/books/java book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/books/java book",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"books",
+						"java book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/books/update/java book",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"book_id\":\"java book\",\n\t\"book_name\":\"java programming the book\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/springBootJpa/books/update/java book",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"books",
+						"update",
+						"java book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8090/springBootJpa/books/delete/java book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/springBootJpa/books/delete/java book",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"springBootJpa",
+						"books",
+						"delete",
+						"java book"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
