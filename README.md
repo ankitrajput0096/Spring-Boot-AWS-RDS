@@ -1,6 +1,6 @@
-# Dockerized Spring boot application with PostgreSQL
+# Integration of Spring boot application with AWS RDS
 
-Dockerized Spring Boot application with Dockerized postgreSQL server (JPA, Hibernate, PostgreSQL)
+Dockerized Spring Boot application using AWS RDS Postgres DB.
 
 ## Getting Started
 
@@ -10,31 +10,35 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the project to your local environment:
     ```
-    git clone https://github.com/ankitrajput0096/Dockerized_SpringBoot_PostgreSQL
+    git clone https://github.com/ankitrajput0096/spring-boot-aws-rds
     ```
 
 2. You need maven installed on your environment:
 
-    #### Mac (homebrew):
-    
+   #### Mac (homebrew):
+
     ```
     brew install maven
     ```
-    #### Ubuntu:
+   #### Ubuntu:
     ```
     sudo apt-get install maven
     ```
 
 3. You need Docker to be installed:
 
-    #### Windows:
-    https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe
-    
-    #### Mac:
-    https://download.docker.com/mac/stable/Docker.dmg
-    
-    #### Ubuntu:
-    https://docs.docker.com/install/linux/docker-ce/ubuntu/
+   #### Windows:
+   https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe
+
+   #### Mac:
+   https://download.docker.com/mac/stable/Docker.dmg
+
+   #### Ubuntu:
+   https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+### NOTE
+Please create an AWS RDS Postgres DB first and then update the details of the postgres DB in docker-compose.yml file.
+Properties you need to change are `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_URL` and `POSTGRES_PORT`.
 
 ### Installing
 
@@ -50,12 +54,6 @@ Build docker Image:
 docker-compose build
 ```
 
-Start docker:
-
-```
-docker-compose up
-```
-
 ## Running
 
 Start docker:
@@ -63,31 +61,18 @@ Start docker:
 docker-compose up
 ```
 
-Run the application from the `Application.java` main method directly,
-or from a command line:
+Or Run the application from the `Application.java` main method directly,
+Or from a command line:
 ```
 mvn spring-boot:run
 ```
 
-Keep docker running in a separate terminal tab, create another tab to run the application.
-
 Your server should be now running on http://localhost:8090
 
-## Alternate way to start this application
-1. Clone this repository
-2. Bring up the application by just using docker-compose 
-    ```
-    sudo docker-compose -f my-docker-compose.yml up
-    ```
-    Your server should be now running on http://localhost:8090
-3. Bring down the application 
-    ```
-    sudo docker-compose -f my-docker-compose.yml down
-    ```
-## Get an access to all exposed API's with Postman
+## Get access to all exposed API's with Postman
 
 1. Install Postman (https://www.getpostman.com)
-2. Import Postman collection from the `Dockerized_SpringBoot_PostgreSQL.postman_collection.json` file
+2. Import Postman collection from the `SpringBoot_PostgreSQL_AWS_RDS.postman_collection.json` file
 3. Enjoy !!
 
 ## Built With
@@ -95,7 +80,6 @@ Your server should be now running on http://localhost:8090
 * [Spring Boot](https://spring.io/projects/spring-boot) - Spring Boot 2
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Docker](https://www.docker.com/) - For containerization of application
-* [PostgreSQL](https://www.postgresql.org/) - Database
 
 ## Contributing
 
