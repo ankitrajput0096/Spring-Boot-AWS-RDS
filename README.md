@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the project to your local environment:
     ```
-    git clone https://github.com/ankitrajput0096/spring-boot-aws-rds
+    git clone https://github.com/ankitrajput0096/Spring-Boot-AWS-RDS
     ```
 
 2. You need maven installed on your environment:
